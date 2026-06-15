@@ -31,7 +31,7 @@
     {
       "title": "Pika Coaching System",
       "category": "standard",
-      "url": "https://pika-coaching.netlify.app/",
+      "url": "https://pika-coaches.vercel.app/",
       "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
       "features": ["Fluid Typography", "Lead Booking Funnel", "100% Mobile Responsive"]
     },
@@ -93,6 +93,36 @@
         "Google Maps or booking",
         "Delivered in 7-10 days"
       ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Mushfiqur Rahman Rakib",
+      "project": "Khaati",
+      "url": "https://khaati.vercel.app/",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      "text": "MySpace built our website incredibly fast. The design is clean, visually striking, and perfectly captures the essence of our brand identity. A seamless experience from start to finish!"
+    },
+    {
+      "name": "Sarah Juairia",
+      "project": "Pika Coaches",
+      "url": "https://pika-coaches.vercel.app/",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "text": "I needed a professional coaching profile, and the team delivered beyond my expectations. The fluid typography and lead booking funnel work flawlessly. Highly recommended!"
+    },
+    {
+      "name": "Raiyan Rahman",
+      "project": "Sillage Fragrance",
+      "url": "https://sillage-fragrance.netlify.app/",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+      "text": "The luxury layout for Sillage is absolutely stunning. They integrated fast cart processing and beautiful lazy-loaded graphics that make the site feel premium and highly responsive."
+    },
+    {
+      "name": "Fahim Ahmed",
+      "project": "Forma Service",
+      "url": "https://forma-service.netlify.app/",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
+      "text": "Excellent B2B interface standards. The site speed is instantaneous, and the accessible UX makes it easy for our clients to navigate. Incredible value for the launch rate!"
     }
   ]
 }
