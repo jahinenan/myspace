@@ -3,313 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWeb | Premium Web Design & Development</title>
+    <title>MySpace | Premium AI-Assisted Digital Web Architecture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Inter', sans-serif; letter-spacing: -0.01em;
         }
 
         :root {
-            --bg-color: #faf9f6;
-            --text-dark: #111111;
-            --text-muted: #555555;
+            --bg-canvas: #faf9f6;
+            --bg-pure: #ffffff;
+            --text-main: #111111;
+            --text-muted: #666666;
             --accent: #000000;
-            --card-bg: #ffffff;
+            --border: #e8e7e3;
+            --radius-premium: 24px;
+            
+            /* Custom Palettes Matched Directly To Your Uploaded Graphic Assets */
+            --color-starter-dark: #0f766e;
+            --color-starter-light: #ccfbf1;
+            --color-standard-dark: #1e3a5f;
+            --color-standard-light: #e0ecfb;
+            --color-advanced-dark: #6d28d9;
+            --color-advanced-light: #f3e8ff;
         }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-canvas); color: var(--text-main); line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+        .section-padding { padding: 8rem 0; }
+        
+        .center-heading { text-align: center; max-width: 750px; margin: 0 auto 5rem auto; }
+        .center-heading h2 { font-size: 2.8rem; letter-spacing: -2px; margin-bottom: 1.2rem; }
+        .center-heading p { color: var(--text-muted); font-size: 1.15rem; }
+
+        /* Navigation Layout */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 4%;
-            position: sticky;
-            top: 0;
-            background-color: rgba(250, 249, 246, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; position: sticky; top: 0;
+            background-color: rgba(250, 249, 246, 0.85); backdrop-filter: blur(20px);
+            z-index: 1000; border-bottom: 1px solid var(--border);
         }
+        .logo-space { font-size: 1.6rem; font-weight: 700; letter-spacing: -1.5px; text-decoration: none; color: inherit; }
+        .logo-space span { color: var(--color-advanced-dark); }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 2.5rem; font-weight: 500; transition: opacity 0.2s; }
+        .nav-links a:hover { opacity: 0.5; }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.8rem 1.6rem; border-radius: 100px; }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
+        /* Hero Blocks */
+        .hero-container { padding: 10rem 5% 6rem 5%; text-align: center; max-width: 1050px; margin: 0 auto; }
+        .hero-container h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: 1.1; letter-spacing: -3px; margin-bottom: 2rem; }
+        .hero-container h1 span { color: var(--color-starter-dark); }
+        .hero-container p { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--text-muted); max-width: 800px; margin: 0 auto 3.5rem auto; }
+        .hero-actions { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
+        /* Buttons Styling */
+        .btn { padding: 1.2rem 2.6rem; font-size: 1.05rem; font-weight: 500; border-radius: 100px; text-decoration: none; transition: all 0.25s ease; display: inline-flex; align-items: center; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-secondary { background: var(--bg-pure); border: 1px solid var(--border); color: var(--text-main); }
+        .btn-secondary:hover { border-color: var(--text-main); transform: translateY(-2px); }
 
-        .nav-links a:hover { opacity: 0.6; }
+        /* Social Proof Bar */
+        .proof-bar { background: var(--bg-pure); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 3rem 0; }
+        .proof-flex { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 3rem; text-align: center; }
+        .proof-item h4 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -2px; line-height: 1; margin-bottom: 0.4rem; }
+        .proof-item p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); font-weight: 600; }
 
-        .cta-btn {
-            background-color: var(--accent);
-            color: #fff !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-        }
+        /* Interactive Selection Cards Grid */
+        .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .type-card { background: var(--bg-pure); border: 1px solid var(--border); padding: 3rem 2.5rem; border-radius: var(--radius-premium); cursor: pointer; text-align: left; transition: all 0.3s ease; }
+        .type-card:hover { transform: translateY(-4px); border-color: var(--text-main); }
+        .type-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
+        .type-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
+        .type-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; min-height: 4.5rem; }
+        .type-estimate { font-size: 1.1rem; font-weight: 700; color: var(--text-main); border-top: 1px solid var(--border); padding-top: 1.2rem; display: flex; justify-content: space-between; }
 
-        .hero {
-            padding: 8rem 4% 6rem 4%;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        /* Dynamic Template Grid Layout Filter Framework */
+        .template-filter-row { display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap; }
+        .filter-pill { padding: 0.6rem 1.6rem; border-radius: 100px; border: 1px solid var(--border); background: var(--bg-pure); font-weight: 500; cursor: pointer; transition: all 0.2s; }
+        .filter-pill.active, .filter-pill:hover { background: var(--accent); color: var(--bg-pure); border-color: var(--accent); }
+        
+        .tmpl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 3rem; }
+        .tmpl-card { background: var(--bg-pure); border: 1px solid var(--border); border-radius: var(--radius-premium); overflow: hidden; text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        .tmpl-card:hover { transform: translateY(-6px); }
+        .tmpl-img-frame { width: 100%; height: 280px; overflow: hidden; }
+        .tmpl-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .tmpl-body { padding: 2.5rem; }
+        .tmpl-body h3 { font-size: 1.6rem; margin-bottom: 1.2rem; letter-spacing: -1px; }
+        .tmpl-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tmpl-tag { background: var(--bg-canvas); font-size: 0.8rem; padding: 0.4rem 0.9rem; border-radius: 50px; font-weight: 500; color: var(--text-muted); }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -2px;
-            margin-bottom: 1.5rem;
-        }
+        /* Integrated Calculation Engine Interface */
+        .calc-wrapper { background: var(--bg-pure); border: 1px solid var(--border); border-radius: var(--radius-premium); padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 4rem; }
+        .calc-control h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .calc-group { margin-bottom: 2.5rem; }
+        .calc-group label { display: block; font-weight: 600; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .range-slider { width: 100%; -webkit-appearance: none; height: 6px; border-radius: 50px; background: var(--border); outline: none; }
+        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50px; background: var(--text-main); cursor: pointer; }
+        .calc-output { background: var(--bg-canvas); border-radius: 16px; padding: 3rem; display: flex; flex-direction: column; justify-content: center; text-align: center; border: 1px solid var(--border); }
+        .calc-output .total-label { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); font-weight: 600; margin-bottom: 0.5rem; }
+        .calc-output .total-amt { font-size: 4rem; font-weight: 700; letter-spacing: -2px; color: var(--text-main); line-height: 1; margin-bottom: 1rem; }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
+        /* Image-Replicated Pricing System Layout Component */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; align-items: stretch; }
+        .price-card { background: var(--bg-pure); border-radius: 18px; display: flex; flex-direction: column; overflow: hidden; transition: transform 0.3s; }
+        .price-card:hover { transform: translateY(-4px); }
+        
+        .price-header { padding: 2.5rem 2rem; text-align: center; color: #ffffff; }
+        .price-header h3 { font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .price-header p { font-size: 0.9rem; font-weight: 400; opacity: 0.85; }
+        
+        .price-body { padding: 3rem 2.5rem; flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
+        .price-amt-row { font-size: 3.2rem; font-weight: 700; color: var(--text-main); text-align: center; line-height: 1; margin-bottom: 0.2rem; }
+        .price-subtext { font-size: 0.95rem; font-style: italic; color: var(--text-muted); margin-bottom: 2.5rem; text-align: center; }
+        
+        .price-features { list-style: none; width: 100%; border-top: 1px solid var(--border); padding-top: 2rem; }
+        .price-features li { margin-bottom: 1.2rem; font-size: 1rem; display: flex; align-items: center; gap: 1rem; color: #222; }
+        .price-bullet-icon { width: 26px; height: 26px; border-radius: 50px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
 
-        .stats-section {
-            padding: 5rem 4%;
-            background-color: #ffffff;
-            text-align: center;
-        }
+        /* Specific Graphic Classes mapping */
+        .tier-starter { border: 2px solid var(--color-starter-dark); }
+        .tier-starter .price-header { background-color: var(--color-starter-dark); }
+        .tier-starter .price-body { background-color: var(--color-starter-light); }
+        .tier-starter .price-bullet-icon { background-color: var(--color-starter-dark); }
 
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            max-width: 1100px;
-            margin: 3rem auto 0 auto;
-            flex-wrap: wrap;
-        }
+        .tier-standard { border: 2px solid var(--color-standard-dark); box-shadow: 0 10px 30px rgba(30,58,95,0.06); }
+        .tier-standard .price-header { background-color: var(--color-standard-dark); }
+        .tier-standard .price-body { background-color: var(--color-standard-light); }
+        .tier-standard .price-bullet-icon { background-color: var(--color-standard-dark); }
 
-        .stat-card {
-            flex: 1;
-            min-width: 250px;
-            padding: 3rem 2rem;
-            border: 1px solid #eeeeee;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
+        .tier-advanced { border: 2px solid var(--color-advanced-dark); }
+        .tier-advanced .price-header { background-color: var(--color-advanced-dark); }
+        .tier-advanced .price-body { background-color: var(--color-advanced-light); }
+        .tier-advanced .price-bullet-icon { background-color: var(--color-advanced-dark); }
 
-        .stat-card:hover { transform: translateY(-5px); }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .portfolio {
-            padding: 6rem 4%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .portfolio-item {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s;
-        }
-
-        .portfolio-item:hover { transform: scale(1.02); }
-
-        .portfolio-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background-color: #e0e0e0;
-        }
-
-        .portfolio-info { padding: 1.5rem; }
-        .portfolio-info h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-        .portfolio-info p { color: var(--text-muted); font-size: 0.95rem; }
-
-        .order-section {
-            background-color: var(--accent);
-            color: #ffffff;
-            padding: 6rem 4%;
-            text-align: center;
-        }
-
-        .order-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-
-        .order-section p {
-            color: #cccccc;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin: 0 auto 3rem auto;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .btn-whatsapp { background-color: #25D366; color: white; }
-        .btn-whatsapp:hover { background-color: #1ebd57; }
+        /* Conversion Footer Framework */
+        .conversion-footer-block { background-color: var(--accent); color: #ffffff; padding: 10rem 5%; text-align: center; }
+        .conversion-footer-block h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.5rem; letter-spacing: -2px; }
+        .conversion-footer-block p { color: #cccccc; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.2rem; }
+        .contact-flex { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        
+        .btn-wa { background-color: #25D366; color: white; }
+        .btn-wa:hover { background-color: #1ebd57; }
         .btn-email { background-color: white; color: var(--accent); }
         .btn-email:hover { background-color: #e5e5e5; }
 
-        footer {
-            padding: 3rem 4%;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            border-top: 1px solid #eeeeee;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
-            .stats-container { gap: 2rem; }
-        }
+        footer { padding: 5rem 5%; text-align: center; font-size: 0.9rem; color: var(--text-muted); background: var(--bg-pure); border-top: 1px solid var(--border); }
+        .checkbox-container { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .check-item { display: flex; align-items: center; gap: 0.8rem; font-weight: 500; cursor: pointer; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">MyWeb.</div>
+        <a href="#" class="logo-space">MySpace<span>.</span></a>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#portfolio">Our Work</a>
-            <a href="#order" class="cta-btn">Order Now</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#templates">Designs</a>
+            <a href="#calculator">Price Calculator</a>
+            <a href="#pricing">Launch Rates</a>
+            <a href="#engage" class="nav-cta">Get Your Website</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>We design premium websites that scale your presence.</h1>
-        <p>Clean, high-performance, minimalist code built for impact. Inspired by Squarespace design logic.</p>
-        <a href="#order" class="btn btn-email" style="background: black; color: white;">Get Started</a>
+    <header class="hero-container">
+        <h1>Build your website in <span>days, not weeks.</span></h1>
+        <p>MySpace combines AI-assisted development pipelines with curated layouts to deliver lightning-fast, premium websites starting from introductory launch rates.</p>
+        <div class="hero-actions">
+            <a href="#pricing" class="btn btn-primary">🚀 Launch for BDT 299</a>
+            <a href="#templates" class="btn btn-secondary">🎨 View Templates</a>
+        </div>
     </header>
 
-    <section id="about" class="stats-section">
-        <h2 class="section-title">Proven Track Record</h2>
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-number" id="biz-count">...</div>
-                <div class="stat-label">Businesses Served</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="ind-count">...</div>
-                <div class="stat-label">Individuals Served</div>
+    <section class="proof-bar">
+        <div class="container">
+            <div class="proof-flex">
+                <div class="proof-item">
+                    <h4 id="metric-projects">...</h4>
+                    <p>Live Projects Delivered</p>
+                </div>
+                <div class="proof-item">
+                    <h4 id="metric-delivery">...</h4>
+                    <p>Rapid Timeline Guarantee</p>
+                </div>
+                <div class="proof-item">
+                    <h4 id="metric-cost">...</h4>
+                    <p>Introductory Launch Rate</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="portfolio-grid" id="portfolio-grid">
+    <section id="solutions" class="section-padding">
+        <div class="container">
+            <div class="center-heading">
+                <h2>Tailored Blueprint Architectures</h2>
+                <p>Select your native operating domain to project your scale and determine starting resource boundaries instantly.</p>
             </div>
+            <div class="type-grid" id="intent-grid-box">
+                </div>
+        </div>
     </section>
 
-    <section id="order" class="order-section">
-        <h2>Ready to build your masterpiece?</h2>
-        <p>Get in touch with us today. Click either option below to place an order instantly.</p>
-        <div class="contact-buttons">
-            <a href="https://wa.me/8801706575377?text=Hello%20MyWeb,%20I%20would%20like%20to%20order%20a%20website." target="_blank" class="btn btn-whatsapp">
+    <section id="templates" class="section-padding" style="background: white; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+        <div class="container">
+            <div class="center-heading">
+                <h2>Explore Ready-Made Designs</h2>
+                <p>Browse our live customer installations and responsive application interfaces built directly for global deployment.</p>
+            </div>
+            <div class="template-filter-row">
+                <button class="filter-pill active" onclick="filterTemplates('all', this)">Show All Designs</button>
+                <button class="filter-pill" onclick="filterTemplates('starter', this)">Starter Layouts</button>
+                <button class="filter-pill" onclick="filterTemplates('standard', this)">Standard Systems</button>
+                <button class="filter-pill" onclick="filterTemplates('advanced', this)">Advanced Portfolios</button>
+            </div>
+            <div class="tmpl-grid" id="template-dynamic-target">
+                </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section-padding">
+        <div class="container">
+            <div class="center-heading">
+                <h2>Interactive Price Estimator</h2>
+                <p>Configure variables dynamically to build custom quotes relative to your introductory setup profiles.</p>
+            </div>
+            
+            <div class="calc-wrapper">
+                <div class="calc-control">
+                    <h3>Configure Scope</h3>
+                    <div class="calc-group">
+                        <label id="pages-label">Target Page Volume: 1 Page</label>
+                        <input type="range" id="page-slider" class="range-slider" min="1" max="10" value="1" oninput="runLiveCalculationEngine()">
+                    </div>
+                    <div class="calc-group">
+                        <label>Integrate Operational Capabilities</label>
+                        <div class="checkbox-container">
+                            <label class="check-item"><input type="checkbox" id="opt-domain" onchange="runLiveCalculationEngine()"> Custom Domain Integration (+৳1,200)</label>
+                            <label class="check-item"><input type="checkbox" id="opt-maps" onchange="runLiveCalculationEngine()"> Google Maps & Booking System (+৳1,500)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-output">
+                    <div class="total-label">Projected Resource Estimate</div>
+                    <div class="total-amt" id="calc-total-display">BDT 299</div>
+                    <p style="color: var(--text-muted); font-size:0.9rem;">Introductory system rate includes high-speed deployment configurations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding" style="background: #ffffff; border-top: 1px solid var(--border);">
+        <div class="container">
+            <div class="center-heading">
+                <h2>Service Pricing (Introductory Launch Rates — BDT)</h2>
+                <p>Guaranteed clear pricing structures mapped straight from our production deployment matrix.</p>
+            </div>
+            <div class="pricing-grid" id="image-pricing-target">
+                </div>
+        </div>
+    </section>
+
+    <section id="engage" class="conversion-footer-block">
+        <h2>Let's build your website.</h2>
+        <p>Connect with our design room immediately via WhatsApp or Email to lock in these introductory rates.</p>
+        <div class="contact-flex">
+            <a href="https://wa.me/8801706575377?text=Hello%20MySpace,%20I%20want%20to%20order%20a%20website." target="_blank" class="btn btn-wa">
                 Order via WhatsApp
             </a>
-            <a href="mailto:myspace.bd@gmail.com?subject=New%20Website%20Order%20-%20MyWeb" class="btn btn-email">
+            <a href="mailto:myspace.bd@gmail.com?subject=New%20Website%20Order%20-%20MySpace" class="btn btn-email">
                 Order via Email
             </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 MyWeb. Powered by Netlify.</p>
+        <p>&copy; 2026 MySpace Systems. Fast. Affordable. Smart websites built with AI. Powered by Netlify.</p>
     </footer>
 
     <script>
-        async function loadSiteData() {
+        let cachedData = null;
+
+        async function bootstrapApplicationEngine() {
             try {
-                const response = await fetch('data.json');
-                const data = await response.json();
+                const queryPipeline = await fetch('data.json');
+                cachedData = await queryPipeline.json();
 
-                // 1. Inject the statistics numbers
-                document.getElementById('biz-count').innerText = data.stats.businessesServed;
-                document.getElementById('ind-count').innerText = data.stats.individualsServed;
+                document.getElementById('metric-projects').innerText = cachedData.metrics.projectsDelivered;
+                document.getElementById('metric-delivery').innerText = cachedData.metrics.deliveryTimeline;
+                document.getElementById('metric-cost').innerText = cachedData.metrics.startingPrice;
 
-                // 2. Inject portfolio items
-                const grid = document.getElementById('portfolio-grid');
-                grid.innerHTML = ''; 
-
-                data.portfolio.forEach(project => {
-                    const projectHTML = `
-                        <a href="${project.url}" target="_blank" class="portfolio-item">
-                            <img src="${project.image}" alt="${project.title}" class="portfolio-img">
-                            <div class="portfolio-info">
-                                <h3>${project.title}</h3>
-                                <p>View live website →</p>
+                // Load Intent Selection Cards
+                const intentGrid = document.getElementById('intent-grid-box');
+                intentGrid.innerHTML = '';
+                cachedData.websiteTypes.forEach(type => {
+                    intentGrid.innerHTML += `
+                        <div class="type-card" onclick="document.getElementById('pricing').scrollIntoView();">
+                            <span class="type-icon">${type.icon}</span>
+                            <h3>${type.title}</h3>
+                            <p>${type.desc}</p>
+                            <div class="type-estimate">
+                                <span>Rate:</span>
+                                <span>${type.estimate}</span>
                             </div>
-                        </a>
+                        </div>
                     `;
-                    grid.innerHTML += projectHTML;
                 });
 
-            } catch (error) {
-                console.error("Error loading JSON data:", error);
+                // Generate exact cards replicated from uploaded photo framework
+                const pricingTarget = document.getElementById('image-pricing-target');
+                pricingTarget.innerHTML = '';
+                cachedData.pricingTiers.forEach(tier => {
+                    let listHTML = '';
+                    tier.features.forEach(feat => {
+                        listHTML += `
+                            <li>
+                                <span class="price-bullet-icon">v</span>
+                                <span>${feat}</span>
+                            </li>
+                        `;
+                    });
+
+                    pricingTarget.innerHTML += `
+                        <div class="price-card ${tier.colorClass}">
+                            <div class="price-header">
+                                <h3>${tier.name}</h3>
+                                <p>${tier.subtitle}</p>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-amt-row">${tier.price}</div>
+                                <div class="price-subtext">${tier.subtext}</div>
+                                <ul class="price-features">
+                                    ${listHTML}
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                filterTemplates('all');
+                runLiveCalculationEngine();
+
+            } catch (err) {
+                console.error("Layout Compilation Error:", err);
             }
         }
 
-        window.onload = loadSiteData;
+        function filterTemplates(cat, activePill = null) {
+            if (!cachedData) return;
+            if(activePill) {
+                document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+                activePill.classList.add('active');
+            }
+            const frameTarget = document.getElementById('template-dynamic-target');
+            frameTarget.innerHTML = '';
+            const items = cat === 'all' ? cachedData.templates : cachedData.templates.filter(t => t.category === cat);
+            items.forEach(t => {
+                let tagsHTML = '';
+                t.features.forEach(f => { tagsHTML += `<span class="tmpl-tag">${f}</span>`; });
+                frameTarget.innerHTML += `
+                    <a href="${t.url}" target="_blank" class="tmpl-card">
+                        <div class="tmpl-img-frame"><img src="${t.image}" alt="${t.title}"></div>
+                        <div class="tmpl-body">
+                            <h3>${t.title}</h3>
+                            <div class="tmpl-tags">${tagsHTML}</div>
+                        </div>
+                    </a>
+                `;
+            });
+        }
+
+        // Exact Scale Calculator Engine
+        function runLiveCalculationEngine() {
+            const pages = parseInt(document.getElementById('page-slider').value);
+            document.getElementById('pages-label').innerText = `Target Page Volume: ${pages} ${pages === 1 ? 'Page' : 'Pages'}`;
+
+            let finalPrice = 299; // Starter Baseline
+            
+            if (pages > 1 && pages <= 4) {
+                finalPrice = 599; // Standard Tier Bracket
+            } else if (pages >= 5) {
+                finalPrice = 999; // Advanced Tier Bracket
+            }
+
+            if (document.getElementById('opt-domain').checked) finalPrice += 1200;
+            if (document.getElementById('opt-maps').checked) finalPrice += 1500;
+
+            document.getElementById('calc-total-display').innerText = `BDT ${finalPrice}`;
+        }
+
+        window.onload = bootstrapApplicationEngine;
     </script>
 </body>
 </html>
