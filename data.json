@@ -1,0 +1,23 @@
+{
+  "stats": {
+    "businessesServed": "3+",
+    "individualsServed": "5+"
+  },
+  "portfolio": [
+    {
+      "title": "Pika Coaching",
+      "url": "https://pika-coaching.netlify.app/",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Sillage Fragrance",
+      "url": "https://sillage-fragrance.netlify.app/",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Forma Service",
+      "url": "https://forma-service.netlify.app/",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
