@@ -22,7 +22,7 @@
             --border: #e8e7e3;
             --radius-premium: 24px;
             
-            /* Custom Palettes Matched Directly To Your Uploaded Graphic Assets */
+            /* Custom Palettes */
             --color-starter-dark: #0f766e;
             --color-starter-light: #ccfbf1;
             --color-standard-dark: #1e3a5f;
@@ -107,7 +107,6 @@
         .review-stars { color: #F59E0B; font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px; }
         .review-text { font-size: 1.05rem; color: var(--text-main); font-style: italic; margin-bottom: 2rem; line-height: 1.6; }
         .review-author { display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
-        .review-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
         .review-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
         .review-info a { font-size: 0.85rem; color: var(--color-standard-dark); text-decoration: none; font-weight: 500; }
         .review-info a:hover { text-decoration: underline; }
@@ -123,7 +122,7 @@
         .calc-output .total-label { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); font-weight: 600; margin-bottom: 0.5rem; }
         .calc-output .total-amt { font-size: 4rem; font-weight: 700; letter-spacing: -2px; color: var(--text-main); line-height: 1; margin-bottom: 1rem; }
 
-        /* Image-Replicated Pricing System Layout Component */
+        /* Pricing Grid */
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; align-items: stretch; }
         .price-card { background: var(--bg-pure); border-radius: 18px; display: flex; flex-direction: column; overflow: hidden; transition: transform 0.3s; }
         .price-card:hover { transform: translateY(-4px); }
@@ -140,7 +139,6 @@
         .price-features li { margin-bottom: 1.2rem; font-size: 1rem; display: flex; align-items: center; gap: 1rem; color: #222; }
         .price-bullet-icon { width: 26px; height: 26px; border-radius: 50px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
 
-        /* Specific Graphic Classes mapping */
         .tier-starter { border: 2px solid var(--color-starter-dark); }
         .tier-starter .price-header { background-color: var(--color-starter-dark); }
         .tier-starter .price-body { background-color: var(--color-starter-light); }
@@ -156,7 +154,7 @@
         .tier-advanced .price-body { background-color: var(--color-advanced-light); }
         .tier-advanced .price-bullet-icon { background-color: var(--color-advanced-dark); }
 
-        /* Conversion Footer Framework */
+        /* Conversion Footer */
         .conversion-footer-block { background-color: var(--accent); color: #ffffff; padding: 10rem 5%; text-align: center; }
         .conversion-footer-block h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.5rem; letter-spacing: -2px; }
         .conversion-footer-block p { color: #cccccc; margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.2rem; }
@@ -171,7 +169,6 @@
         .checkbox-container { display: grid; grid-template-columns: 1fr; gap: 1rem; }
         .check-item { display: flex; align-items: center; gap: 0.8rem; font-weight: 500; cursor: pointer; }
         
-        /* Responsive adjustments */
         @media (max-width: 900px) {
             .calc-wrapper { grid-template-columns: 1fr; gap: 3rem; padding: 2.5rem; }
             .nav-links a:not(.nav-cta) { display: none; }
@@ -197,7 +194,7 @@
         <p>MySpace combines AI-assisted development pipelines with curated layouts to deliver lightning-fast, premium websites starting from introductory launch rates.</p>
         <div class="hero-actions">
             <a href="#pricing" class="btn btn-primary">🚀 Launch for BDT 299</a>
-            <a href="#templates" class="btn btn-secondary">🎨 View Templates</a>
+            <a href="#templates" class="btn btn-secondary">🎨 View Portfolios</a>
         </div>
     </header>
 
@@ -235,7 +232,7 @@
     <section id="templates" class="section-padding" style="background: white; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
         <div class="container">
             <div class="center-heading">
-                <h2>Explore Ready-Made Designs</h2>
+                <h2>Explore Ready-Made Designs & Portfolios</h2>
                 <p>Browse our live customer installations and responsive application interfaces built directly for global deployment.</p>
             </div>
             <div class="template-filter-row">
@@ -250,7 +247,6 @@
         </div>
     </section>
 
-    <!-- NEW REVIEWS SECTION -->
     <section id="reviews" class="section-padding">
         <div class="container">
             <div class="center-heading">
@@ -313,7 +309,7 @@
             <a href="https://wa.me/8801706575377?text=Hello%20MySpace,%20I%20want%20to%20order%20a%20website." target="_blank" class="btn btn-wa">
                 Order via WhatsApp
             </a>
-            <a href="mailto:myspace.bd@gmail.com?subject=New%20Website%20Order%20-%20MySpace" class="btn btn-email">
+            <a href="mailto:jahin701@gmail.com?subject=New%20Website%20Order%20-%20MySpace" class="btn btn-email">
                 Order via Email
             </a>
         </div>
@@ -383,7 +379,7 @@
                     `;
                 });
 
-                // Load Reviews
+                // Load Reviews (Images removed)
                 if (cachedData.reviews) {
                     const reviewsTarget = document.getElementById('reviews-dynamic-target');
                     reviewsTarget.innerHTML = '';
@@ -395,7 +391,6 @@
                                     <p class="review-text">"${review.text}"</p>
                                 </div>
                                 <div class="review-author">
-                                    <img src="${review.image}" alt="${review.name}" class="review-avatar">
                                     <div class="review-info">
                                         <h4>${review.name}</h4>
                                         <a href="${review.url}" target="_blank">${review.project} ↗</a>
