@@ -45,14 +45,14 @@
     {
       "title": "Sillage Fragrance",
       "category": "advanced",
-      "url": "https://sillage-fragrance.netlify.app/",
+      "url": "https://sillage-sigma.vercel.app/",
       "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
       "features": ["Luxury Curated Layout", "Fast Cart Processing", "Lazy-Loaded Graphics"]
     },
     {
       "title": "Forma Service",
       "category": "starter",
-      "url": "https://forma-service.netlify.app/",
+      "url": "https://forma-peach-nu.vercel.app/",
       "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
       "features": ["B2B Interface Standards", "Accessible UX", "Instant Paint Speeds"]
     }
@@ -118,13 +118,13 @@
     {
       "name": "Raiyan Rahman",
       "project": "Sillage Fragrance",
-      "url": "https://sillage-fragrance.netlify.app/",
+      "url": "https://sillage-sigma.vercel.app/",
       "text": "The luxury layout for Sillage is absolutely stunning. They integrated fast cart processing and beautiful lazy-loaded graphics that make the site feel premium and highly responsive."
     },
     {
       "name": "Fahim Ahmed",
       "project": "Forma Service",
-      "url": "https://forma-service.netlify.app/",
+      "url": "https://forma-peach-nu.vercel.app/",
       "text": "Excellent B2B interface standards. The site speed is instantaneous, and the accessible UX makes it easy for our clients to navigate. Incredible value for the launch rate!"
     }
   ]
